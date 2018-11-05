@@ -1,0 +1,378 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Ora API Reference</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;json&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/ora.png" class="logo" alt="Ora" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="json">json</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#ora-client" class="toc-h1 toc-link" data-title="ora-client">Ora Client</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#system-operations" class="toc-h2 toc-link" data-title="system-operations">System Operations</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#commands" class="toc-h1 toc-link" data-title="commands">Commands</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#transactions" class="toc-h2 toc-link" data-title="transactions">Transactions</a>
+                  </li>
+                  <li>
+                    <a href="#subscriptions" class="toc-h2 toc-link" data-title="subscriptions">Subscriptions</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#client-plug-ins" class="toc-h1 toc-link" data-title="client-plug-ins">Client Plug-ins</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#in-progress" class="toc-h2 toc-link" data-title="in-progress">In progress</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#wallet-integration" class="toc-h1 toc-link" data-title="wallet-integration">Wallet Integration</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#todo" class="toc-h2 toc-link" data-title="todo">TODO</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#further-work" class="toc-h1 toc-link" data-title="further-work">Further Work</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#todo-2" class="toc-h2 toc-link" data-title="todo">TODO</a>
+                  </li>
+              </ul>
+          </li>
+      </div>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p>This API documentation is meant to give developers the ability to use the
+Ora Client. The library is made to be simple and easy to use to allow for
+fast development and deployment.</p>
+
+<p>This documentation is enabled through the use of <a href="https://github.com/lord/slate">slate</a>.</p>
+<h1 id='ora-client'>Ora Client</h1>
+<p>The Ora Light Client can be used as an endpoint by any client. This can allow for
+a malleable base structure. Currently, there are no client plug-ins for the Ora Client.
+This means that the only available operations are system operations.</p>
+<h2 id='system-operations'>System Operations</h2><h3 id='disputes'>Disputes</h3>
+<p>Disputes enable clients to push issues with transactions and requests to the Ora Network.
+These disputes are handled by the Ora Client itself, and reference the service and event
+transaction of the dispute in question.</p>
+<h1 id='commands'>Commands</h1>
+<p>Ora Client Operations are packaged into generalized commands.
+Commands can be specific to services and chains. This generalization allows for easy
+reuse and powerful extensions.</p>
+
+<blockquote>
+<p>A command can be represented through the following JSON:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">  </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="err">UID</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"service"</span><span class="p">:</span><span class="w"> </span><span class="err">CHAIN</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"action"</span><span class="p">:</span><span class="w"> </span><span class="err">ACTION</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="err">ACTION_PAYLOAD</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>This will be a unique identifier for the command, initially the id will be the transaction hash</td>
+</tr>
+<tr>
+<td>service</td>
+<td>This is the chain or service that the command is being sent for</td>
+</tr>
+<tr>
+<td>action</td>
+<td>This will identify the specific action being done</td>
+</tr>
+<tr>
+<td>data</td>
+<td>The payload used for the action</td>
+</tr>
+</tbody></table>
+
+<p>Commands can be used on the Ora Client as a form of wrapper for transactions and subscriptions.
+Commands are then sent through the Ora network. Once a command is pushed to Ora, the client will be notified of
+updates until the command cycle is completed.</p>
+<h2 id='transactions'>Transactions</h2>
+<p>Transactions are chain-specifc operations that enable the transfer of assets on the blockchain. Transactions, and all actions,
+must be validated by the client itself.</p>
+
+<blockquote>
+<p>A transaction is chain-specific, but here is an example payload for Cardano thanks to its API:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+</span><span class="s2">"destinations"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+  </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A7k5bz1QR2...Tx561NNmfF"</span><span class="w">
+</span><span class="p">}],</span><span class="w">
+</span><span class="s2">"source"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"accountIndex"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"walletId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ae2tdPwUPE...8V3AVTnqGZ"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="s2">"spendingPassword"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5416b2988745725998907addf4613c9b0764f04959030e1b81c603b920a115d0"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre><h2 id='subscriptions'>Subscriptions</h2>
+<p>Subscriptions allow for the tracking of specific addresses on a chain through updates from the
+chain itself rather than from repeated requests. This subscriptions an be made for different addresses on different chains.</p>
+
+<blockquote>
+<p>A transaction is chain-specific, but here is an example transaction for Cardano:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">  </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="err">UID</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"service"</span><span class="p">:</span><span class="w"> </span><span class="err">CHAIN</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"accounts"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">accounts</span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre><h1 id='client-plug-ins'>Client Plug-ins</h1>
+<p>The Ora Client is made intentionally light-weight, but plug-ins and additions can be made to
+support different chains and services. Plug-ins for chains can be integrated with the client and implement
+validation and routing protocols for the services they provide. Operations within the client must be validated,
+this can be done through merkle trees and light clients.</p>
+<h3 id='in-progress'>In progress</h3><h1 id='wallet-integration'>Wallet Integration</h1>
+<p>The next step for the Ora Client is to provide easy-to-use wallet integration to enable
+platforms to integrate with the client itself under their own white-label.</p>
+<h3 id='todo'>TODO</h3><h1 id='further-work'>Further Work</h1><h3 id='todo-2'>TODO</h3>
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="json">json</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
